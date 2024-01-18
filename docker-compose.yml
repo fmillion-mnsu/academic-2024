@@ -1,0 +1,20 @@
+version: "3.4"
+
+services:
+
+  2024_oracle:
+    image: academic/oracle:v2
+    restart: unless-stopped
+    mem_limit: 3G
+    shm_size: '1G'
+    hostname: 2024_oracle
+    ports:
+      - 10.134.29.6:20000:1521
+    environment:
+      ORACLE_PWD: Academic2024it340
+      ORACLE_MEMORY: 2048
+      DB_USERS: 
+    volumes:
+      - ./data/oracle:/u01/app/oracle/oradata
+      - ./databases/oracle:/preload:ro
+
