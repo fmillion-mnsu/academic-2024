@@ -17,4 +17,5 @@ services:
     volumes:
       - ./data/oracle:/u01/app/oracle/oradata
       - ./databases/oracle:/preload:ro
+      - ./data/log:/log
 
