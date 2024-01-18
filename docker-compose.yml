@@ -13,9 +13,7 @@ services:
     environment:
       ORACLE_PWD: Academic2024it340
       ORACLE_MEMORY: 2048
-      DB_USERS: 
     volumes:
       - ./data/oracle:/u01/app/oracle/oradata
       - ./databases/oracle:/preload:ro
       - ./data/log:/log
-

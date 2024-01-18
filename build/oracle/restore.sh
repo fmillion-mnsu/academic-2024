@@ -83,8 +83,8 @@ if [ -d /preload ]; then
 
             sqlplus $DB_USER@localhost/$DB_PASS @$db 2>&1 >>/log/loader.log
 
-            echo "----------------------------------------------------\n" >> /log/loader.log
-
+            echo "----------------------------------------------------" >> /log/loader.log
+            echo "" >> /log/loader.log
             rm /tmp/create.txt
         done
     done
