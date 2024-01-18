@@ -65,18 +65,18 @@ if [ -d /preload ]; then
             echo "[loader] Creating database user '$DB_USER' with password \'$DB_PASS\'."
 
             echo "************ $DB_USER ************" >> /log/loader.log
- 
+
             echo "CREATE USER $DB_USER IDENTIFIED BY \"$DB_PASS\";" > /tmp/create.txt
             echo "GRANT CREATE SESSION TO $DB_USER;" >> /tmp/create.txt
-            echo "GRANT CONNECT TO $DB_NAME;" >> /tmp/create.txt
-            echo "GRANT ALL PRIVILEGES TO $DB_NAME;" >> /tmp/create.txt
+            echo "GRANT CONNECT TO $DB_USER;" >> /tmp/create.txt
+            echo "GRANT ALL PRIVILEGES TO $DB_USER;" >> /tmp/create.txt
             #echo "GRANT SYSDBA TO $DB_NAME;" >> /tmp/create.txt
             echo "------------ Running this create script ------------" >> /log/loader.log
             cat /tmp/create.txt >> /log/loader.log
             echo "----------------------------------------------------" >> /log/loader.log
 
             sqlplus sys@localhost/$ORACLE_PWD as sysdba @/tmp/create.txt 2>&1 >>/log/loader.log
-            
+
             # load the data
             echo "[loader] Loading data from '$db' to '$DB_USER' tablespace."
             echo "------------ Running database load script -------------" >> /log/loader.log

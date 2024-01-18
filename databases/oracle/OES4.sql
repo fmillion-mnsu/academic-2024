@@ -54,7 +54,7 @@ create table VENDOR (
 insert into vendor values	('1000','Samsung','21 Roscoe Dr','Rochester','MN','52010','509 631 2121');
 insert into vendor values	('1001','Sony','109 Shepard Dr','Madison','WI','68012','302 241 2121');
 insert into vendor values	('1002','Microsoft','310 Simpson Ave','New York','NY','78012','631 241 2121');
- 
+
 
 create table TAX (
 	TAX_NO NUMBER(38,0) not null,
@@ -4935,7 +4935,7 @@ insert into orderline values	('4040','120','358','2525');
 insert into orderline values	('4041','130','359','2525');
 insert into orderline values	('4042','140','360','2525');
 insert into orderline values	('4043','150','361','2525');
- 
+
 
 
 create table BRANCH (
@@ -5300,7 +5300,7 @@ create table region_state (
             zip number(10) not null ,
             region_no number(38) ,
 CONSTRAINT region_state_fk FOREIGN KEY (region_no) references regions(region_no));
-            
+
 
 create table salary(
       position number not null , 
@@ -6333,7 +6333,7 @@ LOOP
 		
 	ELSE 
               v_shipping_cost := 0;
-             
+
 	END IF;
 
 	UPDATE ORDERS

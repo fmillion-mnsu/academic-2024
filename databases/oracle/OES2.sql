@@ -38,7 +38,7 @@ create table VENDOR (
 insert into vendor values	('1000','Samsung','21 Roscoe Dr','Rochester','MN','52010','509 631 2121');
 insert into vendor values	('1001','Sony','109 Shepard Dr','Madison','WI','68012','302 241 2121');
 insert into vendor values	('1002','Microsoft','310 Simpson Ave','New York','NY','78012','631 241 2121');
- 
+
 
 create table TAX (
 	TAX_NO NUMBER(38,0) not null,
@@ -4919,7 +4919,7 @@ insert into orderline values	('4040','120','358','2525');
 insert into orderline values	('4041','130','359','2525');
 insert into orderline values	('4042','140','360','2525');
 insert into orderline values	('4043','150','361','2525');
- 
+
 
 
 create table BRANCH (
@@ -5132,20 +5132,20 @@ insert into customer values	('1068','Halle','Edward','1250 Harrinton Ave.','BISM
 insert into customer values	('1072','Bond','Michael','13 Federal 704','MADISON','WI','53703',	'5','','','','100');
 insert into customer values	('1076','Thomas','Catherine','4590 Blake Street','JACKSON','MS','39201',	'5','','','','100');
 insert into customer values	('1001','Case','Steve','101 michigan','New Ulm','MN','56023',	'5','507-387-1234','2500','5000','101');
-insert into customer values	('1024','Aslam','Muhammad','12 stadium','Madison','WI','54003',	'5',' ','9000','','101');
+insert into customer values	('1024','Aslam','Muhammad','12 stadium','Madison','WI','54003',	'5','ï¿½','9000','','101');
 insert into customer values	('1061','Widdes','Steven','4800 Hampden Lane','DES MOINES','IA','50309',	'5','','','','101');
 insert into customer values	('1065','Colson','Earl M.','1050 Conn. Ave','SAINT PAUL','MN','55101',	'5','','','','101');
 insert into customer values	('1069','Wehland','Charles','3677 Park Avenue','LINCOLN','NE','68502',	'5','','','','101');
 insert into customer values	('1073','Nabb','Edward','145 Laywers Row','MADISON','WI','53703',	'5','','','','101');
 insert into customer values	('1077','Miller','William','386 Hilltop Street','BISMARCK','ND','58501',	'5','','','','101');
 insert into customer values	('1003','Aslam','Kashif','762 Stadium Rd','Mankato','MN','56001',	'5','507-34-9090','','','102');
-insert into customer values	('1058','Johny','John','2250 Potts Point Road','LITTLE ROCK','AR','72201',	'5',' ','4000','','102');
+insert into customer values	('1058','Johny','John','2250 Potts Point Road','LITTLE ROCK','AR','72201',	'5','ï¿½','4000','','102');
 insert into customer values	('1062','McMillan','Donna','1901 Research Blvd., Ste.220','SPRINGFIELD','IL','62701',	'5','','','','102');
 insert into customer values	('1066','Allen','Paul','14 Dupont Circle','JEFFERSON CITY','MO','65101',	'5','','','','102');
 insert into customer values	('1070','Nelson','Macy','410 Washington Ave.','OKLAHOMA CITY','OK','73102',	'5','','','','102');
 insert into customer values	('1074','Johnson','William','546 Riley Court','SAINT PAUL','MN','55101',	'5','','','','102');
 insert into customer values	('1078','Johnston','Agnes','2700 Pennsylvania Avenue','LINCOLN','NE','68502',	'5','','','','102');
-insert into customer values	('1006','Brin','Laral','52 Wacker','Chicago','IL','60626',	'5',' ','','','103');
+insert into customer values	('1006','Brin','Laral','52 Wacker','Chicago','IL','60626',	'5','ï¿½','','','103');
 insert into customer values	('1025','George','Colony','314 Maywood','Mankato','MI','20000',	'6','507-234-4455','0','','103');
 insert into customer values	('1059','Geriach','Donald','Box 2009 Unio','MONTGOMERY','AL','36107',	'5','','','','103');
 insert into customer values	('1063','Polott','Andrew','15400 Calhoun Drive Suite 140','TOPEKA','KS','66603',	'5','','','','103');
@@ -5284,7 +5284,7 @@ create table region_state (
             zip number(10) not null ,
             region_no number(38) ,
 CONSTRAINT region_state_fk FOREIGN KEY (region_no) references regions(region_no));
-            
+
 
 
 
@@ -6879,4 +6879,4 @@ insert into state_capital values	('RICHMOND','VA','23219','6');
 insert into state_capital values	('MONTPELIER','VT','5602','6');
 insert into state_capital values	('CHARLESTON','WV','25301','6');
 
-          
+
